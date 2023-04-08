@@ -1,14 +1,17 @@
 import React, { useState } from "react";
 
-function handleChange(e) {
-  console.log("Typing!");
-}
-
 function Form(props) {
   const [name, setName] = useState('');
+
+  function handleChange(e) {
+    console.log(e.target.value);
+    setName(e.target.value);
+  }
+
     function handleSubmit(e) {
         e.preventDefault();
-        alert('Hello, world!');
+        props.addTask(name);
+        setName("");
       }
       
   return (
