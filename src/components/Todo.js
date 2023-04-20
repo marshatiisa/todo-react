@@ -22,11 +22,11 @@ export default function Todo(props) {
           New name for {props.name}
         </label>
         <input 
-        id={props.id} 
-        className="todo-text" 
-        type="text" 
-        value={newName}
-        onChange={handleChange}
+          id={props.id} 
+          className="todo-text" 
+          type="text" 
+          value={newName}
+          onChange={handleChange}
         />
       </div>
       <div className="btn-group">
